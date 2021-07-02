@@ -15,9 +15,12 @@ class NoteViewModel(private val repository: NoteRepository) : ViewModel() {
     /**
      * Launching a new coroutine to insert the data in a non-blocking way
      */
+
     fun insert(note: Note) = viewModelScope.launch {
         repository.insert(note)
     }
+
+
 
     fun deleteNote(note: Note)=viewModelScope.launch {
     repository.deleteNote(note)}

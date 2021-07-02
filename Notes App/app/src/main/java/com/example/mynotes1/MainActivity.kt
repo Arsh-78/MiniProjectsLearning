@@ -2,19 +2,29 @@ package com.example.mynotes1
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.mynotes1.Note.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class MainActivity : AppCompatActivity() {
+
+
+class MainActivity : AppCompatActivity(),OnItemClickListener {
 
     private val newNoteActivityRequestCode = 1
+
+    val EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE"
 
     private val noteViewModel: NoteViewModel by viewModels {
         NoteViewModelFactory((application as NotesApplication).repository)
@@ -26,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
-        val adapter = NoteListAdapter()
+        val adapter = NoteListAdapter(this)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -39,6 +49,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, NewNoteActivity::class.java)
             startActivityForResult(intent, newNoteActivityRequestCode)
         }
+
+      
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -53,8 +66,18 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(
                 applicationContext,
                 R.string.empty_not_saved,
-                Toast.LENGTH_LONG).show()
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 
-}
+    override fun onItemClicked(note: TextView) {
+        val intent = Intent(this, ModifyNoteActivity::class.java)
+        val text = note.text
+        
+        intent.putExtra("EXTRA_NOTE",text)
+        startActivity(intent)
+    }
+
+    }
+
