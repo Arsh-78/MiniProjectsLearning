@@ -12,7 +12,7 @@ interface NoteDao {
     suspend fun insert(note: Note)
 
     @Delete
-    fun delete(note: Note)
+    fun deleteNote(note: Note)
 
     @Query("DELETE FROM Note_table")
     suspend fun deleteAll()

@@ -7,4 +7,4 @@ import androidx.room.PrimaryKey
 
 
 @Entity(tableName = "Note_table")
-data class Note( @ColumnInfo (name = "Note") var note: String,@PrimaryKey(autoGenerate = true) val id: Int)
+data class Note(@ColumnInfo (name = "Note") var note: String,@PrimaryKey(autoGenerate = true) val id: Int = 0)

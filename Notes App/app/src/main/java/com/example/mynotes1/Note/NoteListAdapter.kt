@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mynotes1.R
 
-class NoteListAdapter : ListAdapter<Note, NoteListAdapter.NoteViewHolder>(NotessComparator()) {
+class NoteListAdapter : ListAdapter<Note, NoteListAdapter.NoteViewHolder>(NotesComparator()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         return NoteViewHolder.create(parent)
@@ -36,7 +36,7 @@ class NoteListAdapter : ListAdapter<Note, NoteListAdapter.NoteViewHolder>(Notess
         }
     }
 
-    class NotessComparator : DiffUtil.ItemCallback<Note>() {
+    class NotesComparator : DiffUtil.ItemCallback<Note>() {
         override fun areItemsTheSame(oldItem: Note, newItem: Note): Boolean {
             return oldItem === newItem
         }

@@ -13,5 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:background="@android:color/holo_orange_light" />
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:background="@android:color/holo_orange_light"
+         />
 </LinearLayout>

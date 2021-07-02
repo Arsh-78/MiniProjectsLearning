@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_word">Note...</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Note not saved because it is empty.</string>
+    <string name="add_word">Add Note</string>
+</resources>

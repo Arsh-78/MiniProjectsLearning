@@ -1,6 +1,7 @@
 package com.example.mynotes1.Note
 
 import androidx.lifecycle.*
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 class NoteViewModel(private val repository: NoteRepository) : ViewModel() {
@@ -17,6 +18,9 @@ class NoteViewModel(private val repository: NoteRepository) : ViewModel() {
     fun insert(note: Note) = viewModelScope.launch {
         repository.insert(note)
     }
+
+    fun deleteNote(note: Note)=viewModelScope.launch {
+    repository.deleteNote(note)}
 }
 
 class NoteViewModelFactory(private val repository: NoteRepository) : ViewModelProvider.Factory {
