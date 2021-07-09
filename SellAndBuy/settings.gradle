@@ -1,0 +1,2 @@
+rootProject.name = "SellAndBuy"
+include ':app'

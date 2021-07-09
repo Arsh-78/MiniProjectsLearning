@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "879594182266",
+    "project_id": "sellandbuy-fdecc",
+    "storage_bucket": "sellandbuy-fdecc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879594182266:android:c2b9f1d3cba1cdc5e94dc3",
+        "android_client_info": {
+          "package_name": "com.example.sellandbuy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879594182266-so6o4hrkfvdljrn9tk95im593ohrqfbv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXbk_WyUbnN2vkVF3UiMXu08l3Lu955WE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879594182266-so6o4hrkfvdljrn9tk95im593ohrqfbv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
