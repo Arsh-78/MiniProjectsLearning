@@ -1,5 +1,6 @@
 package com.example.sellandbuy.ui
 
+import android.media.audiofx.AudioEffect
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -45,7 +46,7 @@ class DiaglogFragmentAddSell : DialogFragment() {
         viewModel.result.observe(viewLifecycleOwner, Observer {
             val message = if(it==null)
             {
-                "Author Added"
+                "Product  Added"
             }else
             {
                 "Some Error Occured"
@@ -56,7 +57,11 @@ class DiaglogFragmentAddSell : DialogFragment() {
 
         Add_Input_Name.setOnClickListener{
             val name = edit_text_name.text.toString()
-            if(name.isEmpty())
+            val sname = edit_text_sname.text.toString()
+            val phno = edit_text_phno.text.toString()
+            val price = edit_text_Price.text.toString()
+            val desc = edit_text_Desc.text.toString()
+            if(name.isEmpty() or sname.isEmpty() or phno.isEmpty() or price.isEmpty() or desc.isEmpty())
             {
                 input_layout_Name.error="This field required"
                 return@setOnClickListener
@@ -64,6 +69,10 @@ class DiaglogFragmentAddSell : DialogFragment() {
 
             val product = Product()
             product.name= name
+            product.selname=sname
+            product.phno=phno
+            product.price=price
+            product.desc=desc
 
 
             viewModel.addsSale(product)

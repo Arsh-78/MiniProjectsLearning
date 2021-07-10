@@ -20,6 +20,11 @@ class ProductListAdapter: RecyclerView.Adapter<ProductListAdapter.ProductViewMod
 
     override fun onBindViewHolder(holder: ProductListAdapter.ProductViewModel, position: Int) {
         holder.view.textView1.text=products[position].name
+        holder.view.textView2.text=products[position].selname
+        holder.view.textView3.text=products[position].phno
+        holder.view.textView4.text=products[position].price
+        holder.view.textView5.text=products[position].desc
+
     }
 
     override fun getItemCount(): Int {

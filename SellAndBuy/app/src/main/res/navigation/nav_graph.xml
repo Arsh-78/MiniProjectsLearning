@@ -3,11 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/sell">
+    app:startDestination="@id/myCustomFragment">
 
     <fragment
         android:id="@+id/sell"
         android:name="com.example.sellandbuy.ui.Sell"
         android:label="fragment_sell"
         tools:layout="@layout/fragment_sell" />
+    <fragment
+        android:id="@+id/buyFragment"
+        android:name="com.example.sellandbuy.ui.BuyFragment"
+        android:label="fragment_buy"
+        tools:layout="@layout/fragment_buy" />
+    <fragment
+        android:id="@+id/myCustomFragment"
+        android:name="com.example.sellandbuy.ui.MyCustomFragment"
+        android:label="MyCustomFragment"
+        tools:layout="@layout/mycustom_fragment">
+        <action
+            android:id="@+id/action_myCustomFragment_to_sell"
+            app:destination="@id/sell" />
+        <action
+            android:id="@+id/action_myCustomFragment_to_buyFragment"
+            app:destination="@id/buyFragment" />
+    </fragment>
 </navigation>

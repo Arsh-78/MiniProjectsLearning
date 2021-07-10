@@ -5,19 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.MyCustomActivity">
+
     <fragment
-        android:id="@+id/fragment"
+        android:id="@+id/myNavHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        app:navGraph="@navigation/nav_graph"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
+        tools:layout="@layout/mycustom_fragment"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

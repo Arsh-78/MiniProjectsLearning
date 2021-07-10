@@ -27,6 +27,78 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name of your Product" />
+
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/input_layout_sName"
+        android:padding="16sp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_sname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name of your Seller" />
+
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/input_layout_phno"
+        android:padding="16sp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_phno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your phone number" />
+
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/input_layout_Price"
+        android:padding="16sp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_Price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price in INR" />
+
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/input_layout_ShortDesc"
+        android:padding="16sp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_Desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Brief Description of comodity" />
+
+
+
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
